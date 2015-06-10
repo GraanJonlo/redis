@@ -7,7 +7,7 @@ RUN \
   build-essential \
   wget
 
-ENV REDIS_VERSION 3.0.1
+ENV REDIS_VERSION 3.0.2
 
 RUN \
   cd /tmp && \
