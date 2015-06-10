@@ -2,7 +2,7 @@ FROM phusion/baseimage:0.9.16
 
 MAINTAINER Andy Grant <andy.a.grant@gmail.com>
 
-ENV REDIS_VERSION 2.8.20
+ENV REDIS_VERSION 2.8.21
 
 RUN \
   apt-get update && apt-get upgrade -y && apt-get install -y \
