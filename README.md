@@ -7,7 +7,9 @@ Redis is an open-source, networked, in-memory, key-value data store with optiona
 ![logo](https://raw.githubusercontent.com/docker-library/docs/master/redis/logo.png)
 
 Tags available
-* `latest`, `3`, `3.0`, `3.0.1`
+* `latest`, `3`, `3.0`, `3.0.3`
+* `3.0.2`
+* `3.0.1`
 * `3.0.0`
 * `2`, `2.8`, `2.8.19`
 
