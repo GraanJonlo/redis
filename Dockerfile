@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.17
+FROM phusion/baseimage:0.9.18
 
 MAINTAINER Andy Grant <andy.a.grant@gmail.com>
 
@@ -7,7 +7,7 @@ RUN \
   build-essential \
   wget
 
-ENV REDIS_VERSION 3.0.5
+ENV REDIS_VERSION 3.0.6
 
 RUN \
   cd /tmp && \
