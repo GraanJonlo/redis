@@ -12,6 +12,8 @@ RUN \
   build-essential \
   wget
 
+RUN rm -rf /var/lib/apt/lists/*
+
 ENV REDIS_VERSION 3.2.0
 
 RUN \
