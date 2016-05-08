@@ -2,12 +2,17 @@ FROM phusion/baseimage:0.9.18
 
 MAINTAINER Andy Grant <andy.a.grant@gmail.com>
 
+ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /usr/local/bin/confd
+RUN chmod +x /usr/local/bin/confd
+
+RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
+
 RUN \
-  apt-get update && apt-get upgrade -y && apt-get install -y \
+  apt-get install -y \
   build-essential \
   wget
 
-ENV REDIS_VERSION 3.0.7
+ENV REDIS_VERSION 3.2.0
 
 RUN \
   cd /tmp && \
@@ -32,4 +37,3 @@ ADD redis.conf /etc/redis/redis.conf
 EXPOSE 6379
 
 CMD ["/sbin/my_init", "--quiet"]
-
