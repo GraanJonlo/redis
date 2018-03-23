@@ -14,7 +14,7 @@ RUN \
 
 RUN rm -rf /var/lib/apt/lists/*
 
-ENV REDIS_VERSION 3.2.8
+ENV REDIS_VERSION 3.2.9
 
 RUN \
   cd /tmp && \
