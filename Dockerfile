@@ -1,20 +1,20 @@
-FROM phusion/baseimage:0.9.19
+FROM phusion/baseimage:0.10.0
 
 MAINTAINER Andy Grant <andy.a.grant@gmail.com>
 
-ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /usr/local/bin/confd
+ADD https://github.com/kelseyhightower/confd/releases/download/v0.15.0/confd-0.15.0-linux-amd64 /usr/local/bin/confd
 RUN chmod +x /usr/local/bin/confd
 
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 
 RUN \
-  apt-get install -y \
+  apt-get update && apt-get install -y \
   build-essential \
   wget
 
 RUN rm -rf /var/lib/apt/lists/*
 
-ENV REDIS_VERSION 3.2.6
+ENV REDIS_VERSION 3.2.7
 
 RUN \
   cd /tmp && \
